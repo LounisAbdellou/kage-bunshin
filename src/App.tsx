@@ -1,22 +1,28 @@
+// Libraries
 import { useState } from "react";
-import { Button } from "./components/ui/button";
-import { ThemeProvider } from "./components/theme-provider";
-import { ModeToggle } from "./components/mode-toggle";
 
-function App() {
+// Components
+import { Button } from "@components/ui/button";
+import { Layout } from "@components/custom-ui/layout";
+import { ModeToggle } from "@components/custom-ui/mode-toggle";
+import { ThemeProvider } from "@components/custom-ui/theme-provider";
+
+const App = () => {
   const [count, setCount] = useState(0);
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <div className="flex min-h-svh flex-col items-center justify-center">
-        <Button
-          variant="outline"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          count is {count}
-        </Button>
-        <ModeToggle />
-      </div>
+      <Layout>
+        <div className="flex min-h-svh flex-col items-center justify-center">
+          <Button
+            variant="outline"
+            onClick={() => setCount((count) => count + 1)}
+          >
+            count is {count}
+          </Button>
+          <ModeToggle />
+        </div>
+      </Layout>
     </ThemeProvider>
   );
 }
