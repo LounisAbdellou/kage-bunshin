@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+import { UsersRound, Settings } from "lucide-react"
 
 import {
   Sidebar,
@@ -11,27 +11,11 @@ import {
   SidebarMenuItem,
 } from "@components/ui/sidebar"
 
-// Menu items.
 const items = [
   {
-    title: "Home",
+    title: "Mocker",
     url: "#",
-    icon: Home,
-  },
-  {
-    title: "Inbox",
-    url: "#",
-    icon: Inbox,
-  },
-  {
-    title: "Calendar",
-    url: "#",
-    icon: Calendar,
-  },
-  {
-    title: "Search",
-    url: "#",
-    icon: Search,
+    icon: UsersRound,
   },
   {
     title: "Settings",
@@ -45,7 +29,7 @@ export const AppSidebar = () => {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel>Kage Bunshin</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
